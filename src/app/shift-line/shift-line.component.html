@@ -1,7 +1,14 @@
+<div>
+  @for (item of data; track item.id; let index = $index) {
+  <div>
+    <app-orders-container
+      [shift]="item.shift"
+      [orders]="item.orders"
+    ></app-orders-container>
 
-<div class="flex flex-row justify-content-between">
-    <app-orders-container shift="T1" orders="89"></app-orders-container>
-    <app-orders-container shift="T2" orders="53"></app-orders-container>
-    <app-orders-container shift="T3" orders="115"></app-orders-container>
-    <app-orders-container shift="T4" orders="214"></app-orders-container>
+    @if (index % 4 !== 3) {
+    <div class="h-3rem w-0 border border-right-1 m-auto"></div>
+    }
+  </div>
+  }
 </div>

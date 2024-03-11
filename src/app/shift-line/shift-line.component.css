@@ -1,3 +1,4 @@
-div:nth-child{
-border-right: 1px solid gray;
+div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }

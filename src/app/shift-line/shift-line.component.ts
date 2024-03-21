@@ -30,25 +30,5 @@ export class ShiftLineComponent {
       shift: 'T4',
       orders: 214,
     },
-    {
-      id: 1,
-      shift: 'T1',
-      orders: 89,
-    },
-    {
-      id: 2,
-      shift: 'T2',
-      orders: 53,
-    },
-    {
-      id: 3,
-      shift: 'T3',
-      orders: 115,
-    },
-    {
-      id: 4,
-      shift: 'T4',
-      orders: 214,
-    },
   ];
 }

@@ -11,5 +11,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  todos = ['Feed my cat'];
+  todos: string[] = [];
+
+  addTodo(todo: string): void {
+    this.todos.push(todo);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-todo-input',
@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './todo-input.component.css',
 })
 export class TodoInputComponent {
+  onNewTodo = output<string>();
+
   onEnter(event: Event) {
     const target = event.target as HTMLInputElement;
-    console.log(target.value);
+    target.select();
+    this.onNewTodo.emit(target.value);
   }
 }
